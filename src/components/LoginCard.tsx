@@ -82,6 +82,7 @@ export const LoginCard = () => {
             <button
               type="submit"
               className="flex-1 rounded-xl bg-primary py-4 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition-all hover:brightness-110 active:scale-95"
+              onClick={() => handleLogin}
             >
               Login
             </button>
