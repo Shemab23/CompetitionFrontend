@@ -78,7 +78,6 @@ export const GlobalProvider = ({ children }: Props) => {
 }
 
 export const useGlobalContext = (): GeneralContextType => {
-  // 2. Added return type
   const context = useContext(GlobalContext)
 
   if (!context) {

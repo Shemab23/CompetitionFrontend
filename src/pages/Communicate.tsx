@@ -251,7 +251,7 @@ export const Communicate = () => {
 
                   {/* Floating Number: Only show if > 0 */}
                   {count > 0 && (
-                    <span className="ml-2 flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-primary/10 px-1 text-[9px] font-black text-primary">
+                    <span className="ml-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary/10 px-1 text-[9px] font-black text-primary">
                       {count}
                     </span>
                   )}

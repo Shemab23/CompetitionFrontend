@@ -1,9 +1,6 @@
 import { FormItem, StaggeredForm } from "./MotionWrappers"
 import { useNavigate } from "react-router-dom"
-// import { LoginAction } from "@/utilits/services/login" // delete
 import { useTerms } from "@/utilits/Hooks/login"
-import { useMutation } from "@tanstack/react-query"
-import { LoginOption } from "@/Options/auth"
 import { useState } from "react"
 
 export const LoginCard = () => {
@@ -13,30 +10,9 @@ export const LoginCard = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const { error, isPending } = useMutation({
-    ...LoginOption(),
-    onSuccess: (data) => {
-      if (data.msg === "success") {
-        localStorage.setItem("user", JSON.stringify(data.ans.user))
-        navigate("/MarketFeed")
-      }
-    },
-    onError: (err) => {
-      console.error("Login failed:", err)
-    },
-  })
-
-  if (error) {
-    return <h1>error</h1>
-  }
-
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    // mutate({
-    //   email,
-    //   password,
-    // })
     localStorage.setItem(
       "user",
       JSON.stringify({
@@ -105,7 +81,7 @@ export const LoginCard = () => {
               type="submit"
               className="flex-1 rounded-xl bg-primary py-4 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition-all hover:brightness-110 active:scale-95"
             >
-              {isPending ? "Processing...." : "Sign In"}
+              Login
             </button>
             <button
               type="button"

@@ -1,10 +1,8 @@
-import * as React from "react"
 import { motion } from "framer-motion"
 import {
   ShieldWarningIcon,
   ArrowLeftIcon,
   HouseIcon,
-  MagnifyingGlassIcon,
   WarningOctagonIcon,
 } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
@@ -13,7 +11,7 @@ export const NotFound = () => {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background p-6 font-sans text-foreground antialiased">
       {/* BACKGROUND DECOR (Subtle Security Grid) */}
-      <div className="absolute inset-0 z-0 [background-image:linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.03]" />
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-size-[40px_40px] opacity-[0.03]" />
 
       <main className="relative z-10 flex flex-col items-center text-center">
         {/* LOGO / ICON */}

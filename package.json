@@ -6,10 +6,9 @@
   "homepage": "https://Shemab23.github.io/CompetitionFrontend",
   "scripts": {
     "dev": "vite",
-
-    "build": "vite build",
+    "build": "tsc && vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",

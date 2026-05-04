@@ -3,8 +3,7 @@ import { Button } from "./ui/button"
 import { ChatCircleTextIcon, LockKeyIcon } from "@phosphor-icons/react"
 import { Input } from "./ui/input"
 
-const COMM_FILTERS = ["proposal", "negotiation", "logistics", "system"] as const
-type CommType = (typeof COMM_FILTERS)[number]
+type CommType = "proposal" | "negotiation" | "logistics" | "system"
 type ShipmentStatus = "collection" | "in_transit" | "delivered"
 
 interface LogEntry {
@@ -45,7 +44,7 @@ type props = {
 export const Message = ({ selectedMsg, setSelectedMsg }: props) => {
   return (
     <div
-      className={`relative flex min-h-[700px] flex-col rounded-[2.5rem] border bg-card/30 lg:col-span-8 ${!selectedMsg ? "hidden lg:flex" : "flex"}`}
+      className={`relative flex min-h-175 flex-col rounded-[2.5rem] border bg-card/30 lg:col-span-8 ${!selectedMsg ? "hidden lg:flex" : "flex"}`}
     >
       {selectedMsg ? (
         <div className="flex h-full flex-col">

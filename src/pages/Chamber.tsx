@@ -154,7 +154,7 @@ export default function Chamber() {
               Nobel Source Operations • 2026
             </p>
           </div>
-          <Button className="h-14 gap-2 rounded-[1.5rem] bg-black px-8 text-xs font-black tracking-widest text-white uppercase">
+          <Button className="h-14 gap-2 rounded-3xl bg-black px-8 text-xs font-black tracking-widest text-white uppercase">
             <Plus weight="bold" /> Create Chamber
           </Button>
         </div>
@@ -167,7 +167,7 @@ export default function Chamber() {
             className="group cursor-pointer rounded-[3rem] border-none bg-white p-10 shadow-xl ring-1 ring-slate-100 transition-all hover:-translate-y-2"
           >
             <div className="mb-8 flex items-start justify-between">
-              <div className="flex h-16 w-16 items-center justify-center rounded-[2rem] bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+              <div className="flex h-16 w-16 items-center justify-center rounded-4xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                 <House size={32} weight="fill" />
               </div>
               <Badge className="bg-green-100 px-4 font-black text-green-700 italic">

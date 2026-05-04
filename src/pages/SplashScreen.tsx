@@ -14,12 +14,12 @@ export function SplashScreen() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % WORDS.length)
-    }, 3000)
+    }, 2000)
     return () => clearInterval(timer)
   }, [WORDS.length])
 
   useEffect(() => {
-    const timer = setTimeout(() => navigate("/Login"), 12000)
+    const timer = setTimeout(() => navigate("/Login"), 8000)
     return () => clearTimeout(timer)
   }, [navigate])
 

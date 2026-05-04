@@ -50,7 +50,7 @@ export function MarketFeed() {
   const { prefCurrency } = useGlobalContext()
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1200)
+    const timer = setTimeout(() => setIsLoading(false), 800)
     return () => clearTimeout(timer)
   }, [])
 
@@ -72,8 +72,15 @@ export function MarketFeed() {
       category: CATEGORIES[i % 4],
       price: { amount: 2500 + i * 400, currency: "USD" },
       images: [
-        { url: "https://picsum.photos/800/600?random=1" },
-        { url: "https://picsum.photos/800/600?random=2" },
+        {
+          url: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          url: "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          url: "https://images.unsplash.com/photo-1584699006710-3ad3b82fce7f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
       ],
       status: i === 3 ? "pending" : "active",
       location: {

@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button"
 import { LoginOption, RegisterOption } from "@/Options/auth"
 import { useMutation } from "@tanstack/react-query"
 import { useState } from "react"
-
-export const Register = () => {
+const Register = () => {
   const [permissions, setPermissions] = useState<
     { name: string; file: File }[]
   >([])
