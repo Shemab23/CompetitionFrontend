@@ -30,6 +30,7 @@ const router = createBrowserRouter([
         element: <AuthLayout />,
         children: [
           { path: "/", element: <SplashScreen /> },
+          { path: "/CompetitionFrontend", element: <SplashScreen /> },
           { path: "/login", element: <Login /> },
           { path: "/register", element: <Register /> },
           { path: "/Chamber/:roomName", element: <RoomInterior /> },

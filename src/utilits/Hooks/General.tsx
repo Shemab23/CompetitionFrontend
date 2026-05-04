@@ -34,7 +34,10 @@ const GlobalContext = createContext<GeneralContextType | undefined>(undefined)
 
 export const GlobalProvider = ({ children }: Props) => {
   const { theme } = useTheme()
-  const logo = theme === "dark" ? "/logo_white.png" : "/logo_black.png"
+  const logo =
+    theme === "dark"
+      ? "CompetitionFrontend/logo_white.png"
+      : "CompetitionFrontend/logo_black.png"
   const [notification, setNotification] = useState(0)
   const [prefCurrency, setPrefCurrency] = useState("USD")
   const [view, setView] = useState<Option>("feed")
